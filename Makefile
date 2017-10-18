@@ -3,11 +3,15 @@ CFLAGS = -Wall -pedantic-errors
 LFLAGS = -lasound
 OBJS = $(patsubst %.c,%.o,$(wildcard *.c))
 
-asaig: $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) -o $@
+asaig: dist $(OBJS)
+	$(CC) $(LFLAGS) $(OBJS) -o dist/$@
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
+
+.PHONY: dist
+dist:
+	mkdir -p dist
 
 .PHONY: clean
 clean:
