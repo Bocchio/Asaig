@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -pedantic-errors
+CFLAGS = -std=c99 -Wall -pedantic-errors
 LFLAGS = -lasound
 OBJS = $(patsubst %.c,%.o,$(wildcard *.c))
 
