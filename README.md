@@ -2,6 +2,10 @@
 
 As simple as it gets WAVE file player.
 
+> Usage:
+>
+> `$ ./asaig my_awesome_song.wav`
+
 And because it's simple, it just reads PCM WAVE files ¯\\\_(ツ)\_/¯
 
 Ended up using ALSA to write to the audio device. And because of that it isn't ANSI C :(
